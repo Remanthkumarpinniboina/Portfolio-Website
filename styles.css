@@ -1,59 +1,128 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: #f8f9fa;
+    color: #333;
     text-align: center;
-    background: #f4f4f4;
 }
 
+/* Header */
 header {
-    background: #333;
+    background: #212529;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
-
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+.social-links {
+    margin-top: 15px;
+}
 .social-links a {
     color: white;
-    margin: 0 10px;
-    font-size: 20px;
+    margin: 0 15px;
+    font-size: 24px;
     text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+.social-links a:hover {
+    transform: scale(1.2);
 }
 
-.projects .project {
+/* Sections */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+section {
     background: white;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
+    margin: 20px auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    font-size: 2rem;
+    color: #212529;
+    margin-bottom: 20px;
 }
 
+/* Projects */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
 .contact form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-
 .contact input, .contact textarea {
-    margin: 10px 0;
-    padding: 10px;
     width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
 }
-
 .contact button {
-    background: #333;
+    background: #212529;
     color: white;
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s;
+}
+.contact button:hover {
+    background: #343a40;
 }
 
+/* Footer */
 footer {
-    background: #222;
+    background: #212529;
     color: white;
-    padding: 10px;
+    padding: 20px;
     margin-top: 20px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 15px;
+    }
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
